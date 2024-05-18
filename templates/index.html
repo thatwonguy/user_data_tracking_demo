@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Usage Tracker</title>
+    <script>
+        function sendEvent(eventType, eventData) {
+            fetch('/track_event', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    user_id: 'user123',  // Replace with dynamic user ID if available
+                    event_type: eventType,
+                    event_data: eventData
+                }),
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            sendEvent('page_view', window.location.pathname);
+
+            document.addEventListener('click', (event) => {
+                sendEvent('click', `Element: ${event.target.tagName}, ID: ${event.target.id}`);
+            });
+
+            window.addEventListener('beforeunload', (event) => {
+                sendEvent('page_exit', window.location.pathname);
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Welcome to the User Usage Tracker</h1>
+    <p>Click around and interact with the page to generate events.</p>
+</body>
+</html>
