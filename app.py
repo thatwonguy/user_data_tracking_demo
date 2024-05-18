@@ -14,6 +14,8 @@ def init_db():
                 user_id TEXT,
                 event_type TEXT,
                 event_data TEXT,
+                ip_address TEXT,
+                user_agent TEXT,
                 timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
             )
         ''')
@@ -30,13 +32,15 @@ def track_event():
     user_id = request.json.get('user_id')
     event_type = request.json.get('event_type')
     event_data = request.json.get('event_data')
+    ip_address = request.remote_addr
+    user_agent = request.headers.get('User-Agent')
     
     with sqlite3.connect('usage_data.db') as conn:
         c = conn.cursor()
         c.execute('''
-            INSERT INTO user_usage (user_id, event_type, event_data) 
-            VALUES (?, ?, ?)
-        ''', (user_id, event_type, event_data))
+            INSERT INTO user_usage (user_id, event_type, event_data, ip_address, user_agent) 
+            VALUES (?, ?, ?, ?, ?)
+        ''', (user_id, event_type, event_data, ip_address, user_agent))
         conn.commit()
 
     return jsonify({'status': 'success'})

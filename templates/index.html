@@ -29,6 +29,15 @@
             window.addEventListener('beforeunload', (event) => {
                 sendEvent('page_exit', window.location.pathname);
             });
+
+            // Additional event listeners
+            document.addEventListener('mousemove', (event) => {
+                sendEvent('mousemove', `X: ${event.clientX}, Y: ${event.clientY}`);
+            });
+
+            document.addEventListener('keydown', (event) => {
+                sendEvent('keydown', `Key: ${event.key}`);
+            });
         });
     </script>
 </head>
