@@ -7,5 +7,18 @@ Ever wonder how apps, websites, games, etc try to capture user data? Well here i
     conda create -n venv python=3.12
     ```
     - alternative method is to create a docker image/container
-    - this is best practice in order to isolate and reproduce development environment without distrupting the rest of your development environment
+    - this is best practice in order to isolate and reproduce development environment without distrupting the rest of your development environment  
 
+## Results
+
+As we can see, if you were to create a website, simply using the flask framework, you are able to collect a multitude of user interaction data. The below table is actual data collected during a test run.
+![alt text](image.png)
+
+### Data Dictionary - demonstrates the data captured
+- id = the event id as it occurs
+- user_id = the user id of the individual who visited your site
+- event_type = the activity that the user carried out on the webpage
+- event_data = where on the website or on the screen did this event occur
+- ip_address = the ip_address associated with the user
+- user_agent = the computer/browser and other agent information the user was operating on while they were on your website/webpage carrying out all these activities
+- timestamp = the exact moment in time where this data was captured
