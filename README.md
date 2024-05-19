@@ -14,7 +14,7 @@ Ever wonder how apps, websites, games, etc try to capture user data? Well here i
 As we can see, if you were to create a website, simply using the flask framework, you are able to collect a multitude of user interaction data. The below table is actual data collected during a test run.
 ![alt text](image.png)
 
-### Data Dictionary - demonstrates the data captured
+### Data Dictionary - metadata information for the columns/data being captured and placed into database
 - id = the event id as it occurs
 - user_id = the user id of the individual who visited your site
 - event_type = the activity that the user carried out on the webpage
