@@ -1,6 +1,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 # user_data_tracking_demo
+
+Data is the life-giving bloodline for Machine learning and artificial intelligence, so it is critical to kniw how to start collecting data, one way or another.
+
 Ever wonder how apps, websites, games, etc try to capture user data? Well here is an example of some data that can be captured when you visit a website or blog etc. Understanding this will also allow you to evade banning.
 
 ## Prequisites
