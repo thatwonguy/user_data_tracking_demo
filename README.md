@@ -12,7 +12,7 @@ Ever wonder how apps, websites, games, etc try to capture user data? Well here i
     conda create -n venv python=3.12
     ```
     - alternative method is to create a docker image/container
-    - this is best practice in order to isolate and reproduce development environment without distrupting the rest of your development environment  
+    - this is best practice in order to isolate and reproduce the 1development environment without distrupting other environment  
 
 ## Results
 
