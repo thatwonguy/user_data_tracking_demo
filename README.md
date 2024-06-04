@@ -1,6 +1,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-# user_data_tracking_demo
+# User Data Tracking Demo
 
 Data is the life-giving bloodline for Machine learning and artificial intelligence, so it is critical to know how to start collecting data, one way or another.
 
